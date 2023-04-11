@@ -23,9 +23,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 function getDNSStats(domains) {
-  const address = domains.split('@').pop();
-  const domain = parser(address).domain;
-  return domain;
+
 }
 
 module.exports = {

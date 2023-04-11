@@ -12,27 +12,28 @@ const { NotImplementedError } = require('../extensions/index.js');
  * 
  */
 function getSeason(date) {
+  //проверяем, если не в форме даты
   if (!date) {
     return 'Unable to determine the time of year!';
   } 
-  /*try {
+  //Если выдает ошибку, вернуть результат
+  try {
     date.getTime()
 } catch (err) {
     throw new Error('Invalid date!')
-}*/
+}
 date = new Date();
   let month = date.getMonth();
   if (month === 11 || month === 00 || month === 01) {
-return "winter"
+return 'winter'
    } else if (month === 02 || month === 03 || month === 04) {
-    return "spring"
+    return 'spring'
     } else if (month === 05 || month === 06 || month === 07) {
-        return "summer"
+        return 'summer'
      } else if (month === 08 || month === 09 || month === 10) {
-     return "autumn"
+     return 'autumn'
      }
 }
-
 module.exports = {
   getSeason
 };
